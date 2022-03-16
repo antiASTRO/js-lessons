@@ -20,29 +20,27 @@
 
 // body.appendChild(container)
 
-const body = document.querySelector('body')
+const body = document.querySelector("body");
 
-const container = document.createElement('div')
-container.className = 'container-sm p-4 d-flex flex-column gap-3'
+const container = document.createElement("div");
+container.className = "container-sm p-4 d-flex flex-column gap-3";
 
-const h3 = document.createElement('h3')
-h3.innerText = 'Tasks'
+const h3 = document.createElement("h3");
+h3.innerText = "Tasks";
 
-const div = document.createElement('div')
-div.className = 'd-flex gap-3'
+const div = document.createElement("div");
+div.className = "d-flex gap-3";
 
-const input = document.createElement('input')
-input.className = 'form-control'
+const input = document.createElement("input");
+input.className = "form-control";
 
-const btn = document.createElement('button')
-btn.className = 'btn btn-primary'
-btn.innerText = 'Create Task'
+const btn = document.createElement("button");
+btn.className = "btn btn-primary";
+btn.innerText = "Create Task";
 
-const ul = document.createElement('ul')
-ul.setAttribute('id', 'task-list')
-ul.className = 'list-group'
-
-
+const ul = document.createElement("ul");
+ul.setAttribute("id", "task-list");
+ul.className = "list-group";
 
 // const li = document.createElement('li')
 // li.className = 'list-group-item'
@@ -57,39 +55,38 @@ ul.className = 'list-group'
 // li4.className = 'list-group-item'
 // li4.innerText = 'Porta ac consectur ac'
 
-
-div.appendChild(input)
-div.appendChild(btn)
+div.appendChild(input);
+div.appendChild(btn);
 
 // ul.appendChild(li)
 // ul.appendChild(li2)
 // ul.appendChild(li3)
 // ul.appendChild(li4)
 
-container.appendChild(h3)
-container.appendChild(div)
-container.appendChild(ul)
+container.appendChild(h3);
+container.appendChild(div);
+container.appendChild(ul);
 
-body.appendChild(container)
+body.appendChild(container);
 
 btn.onclick = (event) => {
-    alert('Salom Uka!')
-    const li = document.createElement('li')
-    li.className = 'list-group-item'
-    li.innerText = 'Cras justo odio'
-    ul.appendChild(li)
-  
+  if (input.value === "") {
+  }
+  else {
+    alert("Salom Uka!");
+    const li = document.createElement("li");
+    li.className = "list-group-item";
+    li.innerText = "Cras justo odio";
+    ul.appendChild(li);
 
-    li.onclick = (event) => {
+    li.onclick = (event) => {};
+    const btn_danger = document.createElement("button");
+    btn_danger.className = "btn btn-danger";
+    btn_danger.innerText = "Create Tesk";
+    li.appendChild(btn_danger);
 
-    }
-    const btn_danger = document.createElement('button')
-    btn_danger.className = 'btn btn-danger'
-    btn_danger.innerText = 'Create Tesk'
-    li.appendChild(btn_danger)
-  
     btn_danger.onclick = (event) => {
-        li.remove()
-    }
-    
-}
+      li.remove();
+    };
+  }
+};
